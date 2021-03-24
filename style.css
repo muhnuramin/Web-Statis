@@ -25,15 +25,30 @@ body {
 .hero {
     grid-area: hero;
     min-height: 300px;
-    background-image: url(img/1.png);
+    background-image: url(img/1.jpg);
     background-size: cover;
     background-position: center;
     padding: 50px;
 }
-
+.heading{
+    font-weight: bold;
+    font-size: 50px;
+    color: brown;
+}
+.sub-heading{
+    font-size: 17px;
+    color: brown;
+}
+.sub-heading span{
+    color: white;
+}
 /* mencari hero dan apapun yang ada didlamnya */
-.hero>* {
-    display: none;
+.hero {
+    display: flex;
+    margin-bottom: 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .feature {
@@ -62,3 +77,12 @@ body {
     font-size: 3vmax;
     font-weight: 200;
 }
+
+/* Responsive */
+@media (max-width:1024px) {
+    
+}
+
+@media (max-width:768px) {}
+
+@media (max-width:320px) {}
