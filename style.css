@@ -20,6 +20,8 @@ body {
         'hero hero features-1'
         'hero hero features-2'
     ;
+    gap: 4px;
+    margin-top: 5vmax;
 }
 
 .hero {
@@ -30,22 +32,25 @@ body {
     background-position: center;
     padding: 50px;
 }
-.heading{
+
+.heading {
     font-weight: bold;
     font-size: 50px;
     color: brown;
 }
-.sub-heading{
+
+.sub-heading {
     font-size: 17px;
     color: brown;
 }
-.sub-heading span{
+
+.sub-heading span {
     color: white;
 }
+
 /* mencari hero dan apapun yang ada didlamnya */
 .hero {
     display: flex;
-    margin-bottom: 5px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
@@ -78,11 +83,101 @@ body {
     font-weight: 200;
 }
 
-/* Responsive */
-@media (max-width:1024px) {
-    
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
-@media (max-width:768px) {}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
 
-@media (max-width:320px) {}
+.service {
+    margin-top: 10%;
+    padding: 15px;
+    text-align: center;
+    border: 1 px solid grey;
+    border-radius: 3px;
+    box-shadow: 0 0 2px green;
+}
+
+.service h3:hover {
+    color: grey;
+}
+
+.service .icon {
+    font-size: 3em;
+}
+
+.icon img {
+    height: 10vmax;
+    width: 10vmax;
+}
+
+.text {
+    margin: 2vmax 0;
+    font-size: 1.5vmax;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    background-color: burlywood;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.footer {
+    display: flex;
+    background-color: burlywood;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width:1024px) {
+    .header {
+        grid-template-areas:
+            'hero'
+            'features-1'
+            'features-2';
+    }
+
+    .features-1,
+    .features-2 {
+        min-height: 100px;
+    }
+}
+
+/* @media (max-width:568px) {
+    .header {
+        grid-template-areas:
+            'hero'
+            'features-1'
+            'features-2';
+    }
+} */
+/* 
+@media (max-width:320px) {
+    .header {
+        grid-template-areas:
+            'hero'
+            'features-1'
+            'features-2';
+    }
+} */
